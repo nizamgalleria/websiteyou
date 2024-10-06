@@ -38,11 +38,11 @@
 
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="index.html">Home</a>
 						</li>
 						<li><a class="nav-link" href="catalogue.html">Catalogue</a></li>
-						<li><a class="nav-link" href="priceCalculator.html">Price Calculator</a></li>
+						<li  class="active"><a class="nav-link" href="priceCalculator.html">Price Calculator</a></li>
 						<li><a class="nav-link" href="pastProject.html">Past Project</a></li>
 						<li><a class="nav-link" href="inspiration.html">Inspiration</a></li>
 						<li><a class="nav-link" href="contact.html">Contact us</a></li>
@@ -59,9 +59,9 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div class="intro-excerpt">
-								<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
+								<h1>Price Calculator</h1>
 								<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-								<p><a href="priceCalculator.html" class="btn btn-secondary me-2">Get Quote</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -74,151 +74,81 @@
 			</div>
 		<!-- End Hero Section -->
 
-		<!-- Start Why Choose Us Section -->
-		<div class="why-choose-section">
-			<div class="container">
-				<div class="row justify-content-between">
-					<div class="col-lg-6">
-						<h2 class="section-title">Why Choose Us</h2>
-						<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+		
+		<!-- Start Contact Form -->
+	<div class="untree_co-section">
+      <div class="container">
 
-						<div class="row my-5">
-							<div class="col-6 col-md-6">
-								<div class="feature">
-									<div class="icon">
-										<img src="images/truck.svg" alt="Image" class="imf-fluid">
-									</div>
-									<h3>Fast &amp; Free Shipping</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-								</div>
-							</div>
+        <div class="block">
+          <div class="row justify-content-center">
 
-							<div class="col-6 col-md-6">
-								<div class="feature">
-									<div class="icon">
-										<img src="images/bag.svg" alt="Image" class="imf-fluid">
-									</div>
-									<h3>Easy to Shop</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-								</div>
-							</div>
 
-							<div class="col-6 col-md-6">
-								<div class="feature">
-									<div class="icon">
-										<img src="images/support.svg" alt="Image" class="imf-fluid">
-									</div>
-									<h3>24/7 Support</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-								</div>
-							</div>
+            <div class="col-md-8 col-lg-8 pb-4">
 
-							<div class="col-6 col-md-6">
-								<div class="feature">
-									<div class="icon">
-										<img src="images/return.svg" alt="Image" class="imf-fluid">
-									</div>
-									<h3>Hassle Free Returns</h3>
-									<p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-								</div>
-							</div>
+              <form>
+                    <div class="form-group mb-1">
+                      <label class="text-black" for="unit">Select Unit Conversion:</label>
+					  <select class="form-control" id="unit" name="unit">
+						<option value="ft">Feet (ft)</option>
+						<option value="m">Meter (m)</option>
+				  	  </select>
+                    </div>
 
-						</div>
+                    <div class="form-group mb-1">
+                      <label class="text-black" for="height">Enter Height :</label>
+                      <input type="number" class="form-control" id="height">
+                    </div>
+
+					<div class="form-group mb-1">
+						<label class="text-black" for="width">Enter Width :</label>
+						<input type="number" class="form-control" id="width">
+					  </div>
+
+					  <div class="form-group mb-5">
+						<label class="text-black" for="design">Select Design:</label>
+						<select class="form-control" id="design" name="design">
+							<option value="18">Classic Wainscoting</option>
+							<option value="21">Twin Box Wainscoting</option>
+							<option value="25">Shiplap Wall (Horizontal)</option>
+							<option value="25">Beadboard Wall (Vertical)</option>
+							<option value="19">Batten Wall</option>
+							<option value="19">Board & Batten</option>
+							<option value="45">Fluted Panel WPC</option>
+							<option value="28">Fluted Panel MDF</option>
+							<option value="25">Accent Wall</option>
+							<option value="23">Herringbone Wall</option>
+							<option value="21">Diamond Wall</option>
+							<option value="60">Diamond Mirror</option>
+							<option value="45">Grand Mirror</option>
+							<option value="12">Textured Wall</option>
+						</select>
+					  </div>
+				
+					  
+					  <button type="button" class="btn" style="background-color: #ff3334; border-color: #ff3334; width: 100%;" onclick="calculateQuote()">Calculate Price</button>
+					  
+					  <div style="text-align: center;">
+					  <div class="form-group mb-5"></div>
+					  	<h2 id="quoteResult"></h2>
+						<div id="contactUsButtonPlaceholder"></div>
 					</div>
+              </form>
 
-					<div class="col-lg-5">
-						<div class="img-wrap">
-							<img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
-						</div>
-					</div>
+            </div>
 
-				</div>
-			</div>
-		</div>
-		<!-- End Why Choose Us Section -->
+          </div>
 
-		<!-- Start We Help Section -->
-		<div class="we-help-section">
-			<div class="container">
-				<div class="row justify-content-between">
-					<div class="col-lg-7 mb-5 mb-lg-0">
-						<div class="imgs-grid">
-							<div class="grid grid-1"><img src="images/img-grid-1.jpg" alt="Untree.co"></div>
-							<div class="grid grid-2"><img src="images/img-grid-2.jpg" alt="Untree.co"></div>
-							<div class="grid grid-3"><img src="images/img-grid-3.jpg" alt="Untree.co"></div>
-						</div>
-					</div>
-					<div class="col-lg-5 ps-lg-5">
-						<h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-						<p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
+        </div>
 
-						<ul class="list-unstyled custom-list my-4">
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
-							<li>Donec vitae odio quis nisl dapibus malesuada</li>
-						</ul>
-						<p><a herf="#" class="btn">Explore</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End We Help Section -->
+      </div>
 
-		<!-- Start Blog Section -->
-		<div class="blog-section">
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-md-6">
-						<h2 class="section-title">Recent Projects</h2>
-					</div>
-					<div class="col-md-6 text-start text-md-end">
-						<a href="pastProject.html" class="more">View All Projects</a>
-					</div>
-				</div>
 
-				<div class="row">
+    </div>
+  </div>
 
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-1.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">First Time Home Owner Ideas</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
+  <!-- End Contact Form -->
 
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-2.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">How To Keep Your Furniture Clean</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
-						<div class="post-entry">
-							<a href="#" class="post-thumbnail"><img src="images/post-3.jpg" alt="Image" class="img-fluid"></a>
-							<div class="post-content-entry">
-								<h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
-								<div class="meta">
-									<span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12, 2021</a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<!-- End Blog Section -->	
+		
 
 		<!-- Start Footer Section -->
 		<footer class="footer-section">
@@ -230,6 +160,7 @@
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
+						<!--<div class="mb-4 footer-logo-wrap"><img src="images/LogoNG.png" alt="Image" width="250" height="ms-auto"></div>-->
 						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">NizamGalleria<span>.</span></a></div>
 						<p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
 
@@ -305,6 +236,68 @@
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>
+
+		<script>
+			function calculateQuote() {
+				const height = parseFloat(document.getElementById('height').value);
+				const width = parseFloat(document.getElementById('width').value);
+				const designPrice = parseFloat(document.getElementById('design').value);
+				const unit = document.getElementById('unit').value;
+				
+				if (isNaN(height) || isNaN(width)) {
+					alert('Please enter valid numbers for height and width.');
+					return;
+				}
+	
+				let area;
+				if (unit == 'ft') 
+				{
+					area = height * width;
+				} 
+				else 
+				{
+				  // Convert feet to m
+				  area = (height * 3.281) * (width * 3.281); 
+				}
+	
+				const quote = area * designPrice;
+	
+				document.getElementById('quoteResult').innerText = 'Estimated Price: RM' + quote.toFixed(2);
+				
+				// Clear the placeholder for the "Contact Us" button
+				document.getElementById("contactUsButtonPlaceholder").innerHTML = "";
+
+				// Create the pre-filled whatsaap message
+				const designText = document.getElementById('design').options[document.getElementById('design').selectedIndex].text;
+				const message = `Hi, Saya dah kira wainscoting, \nTinggi: ${height} ${unit}\nLebar: ${width} ${unit}\nDesign: ${designText}\nEstimated Price: RM${quote.toFixed(2)}`;
+				const encodedMessage = encodeURIComponent(message);
+
+				 // Create the "Contact Us" button
+				 var contactUsButton = document.createElement("button");
+				contactUsButton.type = "button";
+				contactUsButton.className = "btn";
+				contactUsButton.style.backgroundColor = "#ff3334";
+				contactUsButton.style.borderColor = "#ff3334";
+				contactUsButton.innerText = "Contact Us";
+				contactUsButton.onclick = function() {
+					window.open(`https://wa.me/601112139796?text=${encodedMessage}`, "_blank")
+				};
+
+				// Append the "Contact Us" button to the placeholder
+				document.getElementById("contactUsButtonPlaceholder").appendChild(contactUsButton);
+					}
+
+				function hideContactUsButton() {
+					document.getElementById("contactUsButtonPlaceholder").innerHTML = "";
+				}
+
+				// Attach event listeners to form inputs
+				document.getElementById('height').addEventListener('input', hideContactUsButton);
+				document.getElementById('width').addEventListener('input', hideContactUsButton);
+				document.getElementById('unit').addEventListener('change', hideContactUsButton);
+				document.getElementById('design').addEventListener('change', hideContactUsButton);
+		</script>
+	
 	</body>
 
 </html>
