@@ -127,7 +127,7 @@
 					  
 					  <button type="button" class="btn" style="background-color: #ff3334; border-color: #ff3334; width: 100%;" onclick="calculateQuote()">Calculate Price</button>
 					  
-					  <div style="text-align: center;">
+					  <div style="text-align: center; margin-bottom: 80px;">
 					  <div class="form-group mb-5"></div>
 					  	<h2 id="quoteResult"></h2>
 						<div id="contactUsButtonPlaceholder"></div>
@@ -269,7 +269,7 @@
 
 				// Create the pre-filled whatsaap message
 				const designText = document.getElementById('design').options[document.getElementById('design').selectedIndex].text;
-				const message = `Hi, Saya dah kira wainscoting, \nTinggi: ${height} ${unit}\nLebar: ${width} ${unit}\nDesign: ${designText}\nEstimated Price: RM${quote.toFixed(2)}`;
+				const message = `Hi, Saya dah kira wainscoting, \n\nTinggi: ${height} ${unit}\nLebar: ${width} ${unit}\nDesign: ${designText}\nEstimated Price: RM${quote.toFixed(2)}`;
 				const encodedMessage = encodeURIComponent(message);
 
 				 // Create the "Contact Us" button
